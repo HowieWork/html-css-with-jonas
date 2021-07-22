@@ -28,6 +28,7 @@ body {
 /* PRODUCT INFORMATION */
 .price {
   font-size: 24px;
+  display: inline;
 }
 
 .shipping {
@@ -36,6 +37,7 @@ body {
   font-weight: bold;
   color: #777;
   margin-bottom: 20px;
+  float: right;
 }
 
 .sale {
@@ -124,4 +126,25 @@ body {
 .add-cart:hover {
   color: #000;
   background-color: #fff;
+}
+
+/* FLOAT */
+.float {
+}
+
+.float-img {
+  float: left;
+  line-height: 0;
+}
+
+.float-price {
+  float: left;
+  width: 240px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+.float-detail {
+  float: right;
+  width: 240px;
 }
