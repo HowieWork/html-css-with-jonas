@@ -43,6 +43,12 @@
         margin: 0 auto;
       }
 
+      p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 48px;
+      }
+
       /* NAV */
       nav {
         font-size: 20px;
@@ -54,16 +60,12 @@
       }
 
       /* HEADER */
-      .header-title {
+      h1 {
         font-size: 52px;
         margin-bottom: 32px;
         line-height: 1.05;
       }
-      .header-text {
-        font-size: 20px;
-        line-height: 1.6;
-        margin-bottom: 48px;
-      }
+
       .container-inner {
         width: 50%;
 
@@ -74,7 +76,8 @@
       }
 
       /* BUTTON */
-      .btn {
+      .btn:link,
+      .btn:visited {
         text-decoration: none;
         color: #fff;
         font-size: 20px;
@@ -89,14 +92,10 @@
       /* SECTION */
       section {
         padding: 96px 0;
+        background-color: #f7f7f7;
       }
-      .section-title {
+      h2 {
         font-size: 44px;
-        margin-bottom: 48px;
-      }
-      .section-text {
-        font-size: 20px;
-        line-height: 1.6;
         margin-bottom: 48px;
       }
     </style>
@@ -110,10 +109,8 @@
 
       <div class="container">
         <div class="container-inner">
-          <h1 class="header-title">
-            A healthy meal delivered to your door, every single day
-          </h1>
-          <p class="header-text">
+          <h1>A healthy meal delivered to your door, every single day</h1>
+          <p>
             The smart 365-days-per-year food subscription that will make you eat
             healty algain. Tailored to your personal tastes and nutritional
             needs
@@ -125,8 +122,8 @@
     </header>
 
     <section class="container">
-      <h2 class="section-title">Some random heading</h2>
-      <p class="section-text">
+      <h2>Some random heading</h2>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quas,
         minus beatae sapiente debitis voluptatum, laudantium veritatis impedit
         corrupti officia recusandae fugit, voluptates iure velit! Ad suscipit
