@@ -29,6 +29,7 @@ Paragraph default: 1.6
 
 - Shades: 
 #cf711f
+#45260a
 
 - Accents:
 - Greys
@@ -82,6 +83,10 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -140,6 +145,7 @@ body {
   letter-spacing: 0.75px;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -149,6 +155,11 @@ body {
   font-weight: 600;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+
+  /* Only necessary for .btn class */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* border: none; */
   /* Put transition on original "state" */
@@ -182,6 +193,18 @@ body {
   box-shadow: inset 0 0 0 3px #fff;
 }
 
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+  align-self: end;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
+}
+
 .link:link,
 .link:visited {
   display: inline-block;
@@ -197,6 +220,7 @@ body {
   color: #e67e22;
   border-bottom: 1px solid transparent;
 }
+
 .list {
   list-style: none;
   display: flex;
@@ -215,6 +239,11 @@ body {
   width: 3rem;
   height: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* HELPLER/SETTINGS CLASSES */
