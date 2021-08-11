@@ -19,7 +19,6 @@
       /*
       SPACING SYSTEM (px)
       2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
       FONT SIZE SYSTEM (px)
       10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
       */
@@ -38,64 +37,77 @@
       body {
         font-family: "Inter", sans-serif;
         color: #343a40;
+        /* IMPORTANT SET LINE HEIGHT TO 1 */
+        line-height: 1;
+
+        display: flex;
+        justify-content: center;
       }
 
       .pagination {
+        margin-top: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 12px;
-        margin-top: 200px;
       }
 
-      /* NUMBER BUTTONS */
       .page-link:link,
-      .page-link:visited,
-      .dots {
+      .page-link:visited {
         font-size: 18px;
+        color: #343a40;
+        text-decoration: none;
+        cursor: pointer;
         width: 36px;
         height: 36px;
-        text-decoration: none;
         border-radius: 50%;
-        color: #343a40;
 
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+      }
+
+      .page-link:hover,
+      .page-link:active,
+      .page-link.page-link--current {
+        background-color: #087f5b;
+        color: #fff;
       }
 
       .dots {
         color: #868e96;
-        width: auto;
-        cursor: auto;
       }
 
-      .page-link:active,
-      .page-link:hover,
-      .page-link.page-link--current {
-        background-color: #087f5b;
-        color: #fff;
-        border-radius: 50%;
-      }
-
-      /* LEFT/RIGHT BUTTONS */
       .btn {
         width: 48px;
         height: 48px;
+        background: none;
+        border: 1px #087f5b solid;
         border-radius: 50%;
-        border: 2px solid #087f5b;
-        background-color: #fff;
         cursor: pointer;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      .btn:hover {
-        background-color: #087f5b;
+
+      .btn--left {
       }
-      .pagination-icon {
+
+      .btn--right {
+      }
+
+      .btn-icon {
         width: 24px;
         height: 24px;
         stroke: #087f5b;
       }
-      .btn:hover .pagination-icon {
+
+      .btn:hover {
+        background-color: #087f5b;
+      }
+
+      .btn:hover .btn-icon {
         stroke: #fff;
       }
     </style>
@@ -105,7 +117,7 @@
       <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="pagination-icon"
+          class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -126,10 +138,11 @@
       <a href="#" class="page-link">6</a>
       <span class="dots">...</span>
       <a href="#" class="page-link">23</a>
+
       <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="pagination-icon"
+          class="btn-icon"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
